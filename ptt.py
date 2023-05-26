@@ -12,4 +12,5 @@ for art in arts:
     title = art.find('div', class_='title').getText().strip()
     link = 'https://www.ptt.cc' + art.find('div', class_='title').a['href'].strip()
     author = art.find('div', class_='author').getText().strip()
-    print(f'title: {title}\nlink: {link}\nauthor: {author}')
+    date = line.find('div', class_='date').getText().strip()
+    print(f'title: {title}\nlink: {link}\nauthor: {author}\ndate: {date}')
